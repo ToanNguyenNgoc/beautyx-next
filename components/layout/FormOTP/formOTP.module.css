@@ -1,0 +1,247 @@
+.dialog_OTP {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	justify-content: center;
+	flex-direction: column;
+	background-color: var(--bg-white);
+	padding: 48px;
+}
+.dialog_OTP_wrap {
+	width: 350px;
+	margin: 0 auto;
+}
+.dialog_OTP_img {
+	width: 200px;
+	overflow: hidden;
+	flex-shrink: 0;
+	margin: 0 auto;
+	margin-bottom: 24px;
+	flex-shrink: 0;
+}
+.dialog_OTP_content {
+	text-align: center;
+}
+.item_title {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 2;
+}
+.item_desc {
+	font-size: 16px;
+	font-weight: bold;
+}
+.number_input {
+	margin-top: 16px;
+	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+}
+.number_input input {
+	line-height: normal;
+	letter-spacing: 3px;
+	font-size: 14px;
+	width: 100%;
+	font-weight: bold;
+	padding: 16px 24px;
+	border-radius: 8px;
+	outline: none;
+	color: var(--purple);
+	border: 2px solid rgb(128, 128, 128);
+	text-align: center;
+}
+.number_input input::-webkit-input-placeholder {
+	font-weight: bold;
+	font-size: 14px;
+	opacity: 0.5;
+	letter-spacing: normal;
+}
+.number_input input:focus {
+	border-color: var(--purple);
+	-webkit-box-shadow: 0 0 0 4px rgba(222, 225, 255, 0.712);
+	box-shadow: 0 0 0 4px rgba(227, 222, 255, 0.712);
+}
+
+.number_input input::-webkit-outer-spin-button,
+.number_input input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.btn_otp {
+	outline: none;
+	border: 2px solid var(--purple);
+	background-color: var(--purple);
+	border-radius: 8px;
+	padding: 16px 24px;
+	cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 8px;
+	width: 100%;
+	line-height: normal;
+	position: relative;
+}
+/* animation loading */
+
+.lds_dual_ring {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.lds_dual_ring:after {
+	content: ' ';
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	border-color: #fff transparent #fff transparent;
+	animation: lds_dual_ring 1.2s linear infinite;
+}
+.wrap_input {
+	margin: 16px 0;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 0 16px;
+}
+.input_OTP {
+	letter-spacing: 3px;
+	font-size: 14px;
+	width: 100%;
+	font-weight: bold;
+	padding: 12px 0px;
+	border-radius: 8px;
+	outline: none;
+	line-height: normal;
+	color: var(--purple);
+	border: 2px solid rgba(128, 128, 128, 0.689);
+	text-align: center;
+	user-select: none;
+}
+.input_OTP::-webkit-input-placeholder {
+	font-weight: bold;
+	font-size: 14px;
+	color: rgb(128, 128, 128);
+	user-select: none;
+}
+.input_OTP:focus {
+	border-color: var(--purple);
+	-webkit-box-shadow: 0 0 0 4px rgba(222, 225, 255, 0.712);
+	box-shadow: 0 0 0 4px rgba(227, 222, 255, 0.712);
+	user-select: none;
+}
+.input_OTP::-webkit-input-placeholder {
+	color: var(--black);
+	opacity: 0.5;
+	letter-spacing: normal;
+	line-height: normal;
+}
+.input_OTP::-webkit-outer-spin-button,
+.input_OTP::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.btn_very {
+	position: relative;
+}
+.btn_clear,
+.btn_very {
+	line-height: normal;
+	outline: none;
+	border: 2px solid var(--purple);
+	background-color: var(--purple);
+	border-radius: 8px;
+	padding: 12px;
+	cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 8px;
+	width: 100%;
+}
+.text_error {
+	color: #ee6955;
+	font-size: 12px;
+	font-weight: 600;
+	margin-bottom: 6px;
+}
+.wrap_btn_otp {
+	display: flex;
+	align-items: center;
+	grid-gap: 0 16px;
+}
+.dialog_detail_close {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+.dialog_detail_close {
+	cursor: pointer;
+}
+.popup_noti_btn {
+	padding: 8px 16px;
+	border: 0;
+	outline: none;
+	background-color: var(--purple);
+	color: #fff;
+	border-radius: 8px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.sign_body_right_bot {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin-top: 24px;
+}
+.sign_body_right_bot span {
+	font-weight: 500;
+}
+
+.sign_body_right_bot h4 {
+	margin-left: 4px;
+	color: var(--purple);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+	.dialog_OTP {
+		padding: 24px;
+	}
+	.sign_body_right_bot {
+		margin-top: 16px;
+		font-size: 14px;
+	}
+	.dialog_OTP_wrap {
+		max-width: unset;
+		width: calc(80vw);
+	}
+	.wrap-input {
+		margin: 16px 0;
+	}
+	.input-OTP {
+		padding: 8px 0;
+		flex-shrink: 0;
+	}
+	.btn-very,
+	.btn-clear {
+		padding: 8px 0;
+		margin: 0;
+	}
+}
+
+@keyframes lds_dual_ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

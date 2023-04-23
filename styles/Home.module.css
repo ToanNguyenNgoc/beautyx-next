@@ -1,0 +1,9 @@
+.home_page {
+	background-color: var(--bg-gray);
+}
+@media screen and (max-width: 1023.98px) {
+	.home_page {
+		background-color: var(--bg-gray);
+		margin-bottom: 76px;
+	}
+}

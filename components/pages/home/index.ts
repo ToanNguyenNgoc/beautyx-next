@@ -1,0 +1,7 @@
+export * from './components/HomeBanners'
+export * from './components/HomeDiscounts'
+export * from './components/HomeFooterTags'
+export * from './components/HomeOrgsFavorite'
+export * from './components/HomePromo'
+export * from './components/HomeProvinces'
+export * from './components/HomeTags'

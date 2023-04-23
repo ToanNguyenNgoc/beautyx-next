@@ -1,0 +1,121 @@
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marker_name {
+    margin-top: 3px;
+    background-color: var(--bg-white);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    box-shadow: var(--box-shadow);
+}
+
+.card_list_cnt {
+    position: absolute;
+    top: 32px;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    max-width: 388px;
+    padding: 6px;
+    overflow-y: scroll;
+}
+
+.cart_list_item {
+    margin-bottom: 10px;
+}
+
+.cart_item {
+    padding: 6px;
+    border-radius: 6px;
+    background-color: var(--bg-white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_item_img {
+    width: 74px;
+    height: 74px;
+}
+
+.card_detail {
+    height: 74px;
+    width: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+.card_detail_name {
+    font-family: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.card_detail_address {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    display: -webkit-box;
+}
+
+.card_bot_cnt {
+    display: none;
+}
+
+@media screen and (max-width: 1023.98px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .card_list_cnt {
+        display: none;
+    }
+
+    .card_bot_cnt {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        padding: 8px 0px;
+    }
+
+    .card_slide_item {
+        width: 100%;
+        height: 138px;
+        padding: 12px 0px;
+    }
+
+    .cart_item {
+        margin: 0px 8px;
+        height: 100%;
+        box-shadow: var(--box-shadow);
+    }
+    .cart_item_img{
+        width: 102px;
+        height: 102px;
+    }
+    .card_detail{
+        width: calc(100% - 110px);
+    }
+}

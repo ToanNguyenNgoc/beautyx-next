@@ -1,0 +1,55 @@
+.discount_cnt {
+    margin-top: 32px;
+    background: rgb(255, 250, 247);
+    background: linear-gradient(0deg, rgba(255, 250, 247, 1) 4%, rgba(255, 175, 126, 1) 100%);
+}
+
+.home_discounts__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff721f;
+    border-radius: 0 0 16px 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.home_discounts__title span {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    font-family: Nunito;
+}
+
+.homeDiscountList {
+    grid-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+@media screen and (max-width: 767.98px) {
+    .discount_cnt {
+        padding: 12px 0;
+    }
+
+    .home_discounts__title {
+        border-radius: 8px;
+        margin: 0 12px;
+        padding: 5px 12px;
+    }
+
+    .home_discounts__title span {
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: inherit;
+    }
+
+    .homeDiscountList {
+        padding: 12px;
+        grid-gap: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

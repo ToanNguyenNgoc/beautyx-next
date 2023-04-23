@@ -1,0 +1,13 @@
+.container {
+    margin-top: 24px;
+    padding: 12px;
+    background-color: var(--bg-white);
+    border-radius: 6px;
+}
+
+.service_list {
+    grid-gap: 12px;
+    display: grid;
+    padding: 12px;
+    grid-template-columns: repeat(6, 1fr);
+}

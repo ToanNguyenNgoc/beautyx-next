@@ -1,0 +1,121 @@
+.detail_right__infoMer {
+	grid-gap: 8px 0;
+	border-radius: 4px;
+	box-shadow: inset 1px 1px 0 0 #f2f2f2, inset -1px -1px 0 0 #f2f2f2;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	width: 100%;
+}
+
+.infoMer_top {
+	grid-gap: 0 8px;
+	align-items: center;
+	display: flex;
+}
+
+.infoMer_top__img {
+	border-radius: 100px;
+	box-shadow: 0 1px 4px rgb(0 0 0 / 16%);
+	flex-shrink: 0;
+	height: 44px;
+	overflow: hidden;
+	width: 44px;
+}
+
+.infoMer_top__right a {
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
+}
+
+.infoMer_top_name {
+	font-weight: bold;
+}
+
+.infoMer_top__right h5 {
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	color: #808089;
+	display: -webkit-box;
+	font-size: 14px;
+	margin-top: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
+}
+
+.inforMer_mid {
+	display: flex;
+	justify-content: space-between;
+	padding: 8px 0;
+}
+
+.inforMerImg {
+	width: 16px;
+	height: 16px;
+}
+
+.inforMer_item {
+	grid-gap: 4px 0;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.inforMer_item_wrap {
+	display: flex;
+	align-items: center;
+	grid-gap: 0 4px;
+}
+
+.inforMer_item_wrap p {
+	font-weight: bold;
+}
+
+.inforMer_item_text {
+	color: #808089;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.inforMer_bot {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inforMer_bot_left {
+	grid-gap: 0 8px;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid var(--purple);
+	border-radius: 8px;
+	color: var(--purple);
+	display: flex;
+	font-weight: 700;
+	font-size: 14px;
+	justify-content: center;
+	outline: none;
+	padding: 4px 8px;
+	width: calc(50% - 6px);
+	height: 30px;
+	cursor: pointer;
+}
+.inforMer_bot_right{
+	width: calc(50% - 6px);
+}
+
+@media screen and (max-width: 1023.98px) {
+	.inforMer_mid {
+		justify-content: space-evenly;
+	}
+
+	.inforMer_bot_left {
+		padding: 8px 16px;
+	}
+}

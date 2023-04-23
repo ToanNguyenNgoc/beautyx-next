@@ -1,0 +1,145 @@
+.load_grid_cnt {
+	margin-top: 16px;
+	grid-gap: 16px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.load_grid_cnt_org {
+	margin-top: 12px;
+	grid-gap: 12px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.load_grid_item {
+	overflow: hidden;
+	height: 312px;
+	background-color: var(--bg-white);
+	border-radius: 8px;
+}
+
+.load_grid_item_img {
+	width: 100%;
+	height: 184px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+.load_grid_item_de {
+	padding: 8px;
+	height: calc(100% - 184px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.name {
+	height: 30px;
+	width: 100%;
+	border-radius: 4px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+.de_item {
+	width: 100%;
+	height: 16px;
+	border-radius: 4px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+.item_in_org_list {
+	display: grid;
+	grid-gap: 16px;
+}
+
+.item_in_org_list li {
+	cursor: pointer;
+	list-style: none;
+	padding: 12px 8px;
+	/* width: 20%; */
+	height: 282px;
+}
+
+.item_in_org {
+	width: 100%;
+	height: 100%;
+	/* background-color: burlywood; */
+}
+
+.item_in_org_img {
+	height: 178px;
+	width: 100%;
+	border-radius: 8px 8px 0px 0px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+.item_in_org_de {
+	width: 100%;
+	height: calc(100% - 178px);
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.item_in_org_de_name {
+	width: 100%;
+	height: 32px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+.item_in_org_de_price {
+	width: 100%;
+	height: 20px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+.loading_cnt {
+	margin-top: 8px;
+}
+
+.loading_list {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 16px 0;
+}
+
+.loading_item {
+	width: 100%;
+	height: 80px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+.grid_2_cnt {
+	width: 100%;
+	display: grid;
+	grid-gap: 12px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_2_cnt_item {
+	height: 178px;
+	border-radius: 6px;
+	animation: skeleton-loading 2s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+	0% {
+		background-color: hsl(202, 15%, 90%);
+	}
+
+	100% {
+		background-color: hsl(200, 20%, 95%);
+	}
+}
+
+@media screen and (max-width: 767.98px) {
+	.load_grid_cnt {
+		margin-top: 0px;
+		padding: 12px;
+		padding-top: 0px;
+		grid-gap: 12px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

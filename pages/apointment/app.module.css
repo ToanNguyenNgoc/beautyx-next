@@ -1,0 +1,32 @@
+.app_cnt {
+    width: 100%;
+    margin-top: 36px;
+    background-color: var(--bg-white);
+    padding: 12px;
+    border-radius: 8px;
+}
+.tab_cnt{
+    padding-bottom: 12px;
+}
+.tab_list{
+    display: flex;
+    align-items: center;
+}
+.tab_item_cnt{
+    margin: 0px 16px 0px 0px;
+}
+.tab_item{
+    padding: 4px 16px;
+    transition: all .3s;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    border-radius: 14px;
+}
+@media screen and (max-width: 1023.98px) {
+    .app_cnt{
+        padding: 8px;
+        margin-top: 0px;
+        padding-bottom: 80px;
+    }
+}

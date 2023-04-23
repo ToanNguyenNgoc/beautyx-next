@@ -1,0 +1,28 @@
+.org_list,
+.org_list_org {
+    grid-gap: 12px;
+    display: grid;
+    padding: 12px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (max-width: 1023.98px) {
+    .result_right_cnt {
+        padding: 0px;
+    }
+
+    .org_list {
+        padding: 0px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .org_list_org {
+        padding: 0px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .org_list_item {
+        padding: 8px 0px;
+        border-bottom: solid 1px var(--bg-color);
+    }
+}

@@ -1,0 +1,153 @@
+.homeDiscountItem {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.discountImgOrg {
+	background-color: var(--bg-white);
+	border-radius: 100%;
+	overflow: hidden;
+	left: 5px;
+	position: absolute;
+	top: 5px;
+	width: 35px;
+}
+
+.discountImg {
+	border-radius: 8px 8px 0 0;
+	width: 100%;
+	overflow: hidden;
+	flex-shrink: 0;
+	height: 184.66px;
+}
+
+.discountDetail {
+	background-color: #fff;
+	border-radius: 0 0 8px 8px;
+	padding: 8px;
+	overflow: hidden;
+}
+
+.discountTitle {
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	color: var(--text-black);
+	display: -webkit-box;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16px;
+	min-height: 32px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
+}
+
+.discountWrapPrice {
+	display: flex;
+	align-items: center;
+	grid-gap: 0 2px;
+}
+
+.discountSpecialPrice {
+	color: var(--red-cl);
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 18px;
+	margin-right: 6px;
+}
+
+.discountOdlPrice {
+	color: var(--text-hover);
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 14px;
+	text-decoration: line-through;
+}
+
+.discountAddressWrap {
+	display: flex;
+	align-items: flex-start;
+}
+
+.iconMap {
+	margin: -2px 4px 0 0;
+	flex-shrink: 0;
+}
+
+.discountAddress {
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	color: var(--text-black);
+	display: -webkit-box;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-break: break-word;
+}
+
+.discountLimitBar {
+	background: var(--red-cl);
+	background: linear-gradient(90deg, #ff721f 0, #f5c031);
+	background: -webkit-linear-gradient(90deg, #ff721f 0, #f5c031);
+	border-radius: 12px;
+	height: 18px;
+	margin-top: 6px;
+	position: relative;
+}
+
+.discountLimitBarUser {
+	border-radius: 9px;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+
+.discountLimitBarNum {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	height: 100%;
+	left: 0;
+	line-height: 18px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+@media screen and (max-width: 1023.98px) {
+	.discountImg {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.homeDiscountItem:hover {
+		border: 1px solid var(--red-cl);
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		transform: unset;
+	}
+	.homeDiscountList {
+		grid-gap: 12px;
+		display: flex;
+		flex-shrink: 0;
+		flex-wrap: nowrap;
+		width: max-content;
+	}
+	.discountImg {
+		height: unset;
+	}
+	.homeDiscountItem {
+		border-radius: 8px;
+		cursor: pointer;
+		position: relative;
+		transition: all 0.4s;
+	}
+}

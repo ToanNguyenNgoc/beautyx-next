@@ -1,0 +1,243 @@
+/* information */
+.acc_form_row {
+	display: flex;
+	align-items: center;
+	margin: 18px 0px;
+}
+
+.acc_form_row_label {
+	width: 25%;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 500;
+	color: var(--text-black);
+}
+
+.form_avatar_cnt {
+	width: 125px;
+	height: 125px;
+	border-radius: 100%;
+}
+
+.acc_form_row_inp {
+	width: 50%;
+	height: 38px;
+}
+
+.form_bot {
+	width: 75%;
+	margin-top: 24px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* order page */
+.order_tab_cnt {
+	margin: 0 0 16px 8px;
+}
+
+.order_tab_item {
+	color: var(--text-black);
+	padding-bottom: 8px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
+	border-bottom: solid 2px var(--bg-white);
+	transition: all 0.4s;
+	margin-right: 16px;
+}
+
+/* user address */
+.address_btn {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 12px;
+}
+.address_btn button {
+	color: var(--purple);
+	border: solid 1px var(--purple);
+	background-color: var(--bg-white);
+}
+
+.address_btn button {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.address_item_cnt {
+	margin-bottom: 12px;
+	padding: 8px;
+	border-radius: 6px;
+	border: solid 1px var(--bg-color);
+}
+
+.address_item_head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.item_head_left {
+	color: var(--purple);
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.item_head_right {
+	display: flex;
+	align-items: center;
+}
+
+.item_head_right button:first-child {
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 12px;
+	padding: 4px 8px;
+	margin-right: 8px;
+}
+
+.item_head_right button:first-child span {
+	width: 12px !important;
+	height: 12px !important;
+}
+
+.item_head_right button:nth-child(2) {
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.item_default {
+	background-color: var(--bg-color);
+	border-radius: 6px;
+	color: var(--green);
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 12px;
+	padding: 4px 8px;
+}
+
+.item_text {
+	padding: 6px;
+	color: var(--text-black);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 20px;
+}
+
+/* address form  */
+.item_wrapper {
+	width: 100%;
+	margin-bottom: 12px;
+}
+
+.item_text_choose,
+.address_input {
+	width: 100%;
+	padding: 8px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	margin-bottom: 8px;
+	border: solid 1px var(--bg-color);
+	border-radius: 4px;
+}
+
+.provinces_list_cnt,
+.districts_list_cnt,
+.wards_list_cnt {
+	width: 100%;
+	height: 0px;
+	transition: all 0.3s;
+	overflow-y: scroll;
+}
+.list_act {
+	height: 200px;
+	transition: all 0.3s;
+}
+
+.list_item {
+	height: max-content;
+	padding: 12px;
+	background-color: var(--bg-color);
+	border-radius: 6px;
+}
+
+.list_item li {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+	margin: 2px 0px;
+	cursor: pointer;
+	padding: 2px 0px;
+}
+.form_address_btn {
+	display: flex;
+	justify-content: flex-end;
+}
+@media screen and (max-width: 1023.98px) {
+	.order_tab_item {
+		margin-right: unset;
+	}
+	.acc_form {
+		padding: 12px;
+	}
+	.acc_form_row {
+		flex-direction: column;
+	}
+	.acc_form_row:first-child {
+		background-color: var(--bg-color);
+		padding: 12px 0px;
+		border-radius: 6px;
+	}
+	.acc_form_row_label {
+		display: none;
+	}
+	.acc_form_row_inp {
+		width: 100%;
+	}
+	.form_bot {
+		width: 100%;
+	}
+	.form_bot button {
+		width: 100%;
+	}
+	/* order */
+	.order_tab_cnt {
+		padding: 12px;
+		display: flex;
+		justify-content: center;
+		margin: 0px;
+		margin-top: 40px;
+		grid-gap: 16px;
+	}
+	.order_tab_item {
+		width: 30%;
+		font-size: 16px;
+		text-align: center;
+	}
+	/* address */
+	.address_btn {
+		padding: 12px 12px 0px 12px;
+		margin-bottom: 0px;
+	}
+	.address_btn button {
+		padding: 8px 16px;
+	}
+	.address_list {
+		padding: 12px;
+	}
+	.address_item_cnt {
+		box-shadow: 0px 0px 17px -13px rgba(0, 0, 0, 0.54);
+	}
+	/* address form */
+	.form_cnt {
+		padding: 12px;
+	}
+	.form_address_btn button {
+		width: 100%;
+	}
+}

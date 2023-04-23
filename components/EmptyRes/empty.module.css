@@ -1,0 +1,19 @@
+.res_null {
+	padding: 20px 0;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+.res_null_title {
+	text-align: center;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 2px;
+}
+.wrap_img {
+	width: 200px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 24px;
+}

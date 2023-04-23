@@ -7,8 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import "./i18n";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import * as Sentry from "@sentry/react";
-import { Integrations } from "@sentry/tracing";
+// import * as Sentry from "@sentry/react";
+// import { Integrations } from "@sentry/tracing";
 import ModalLoad from "./components/ModalLoad/index";
 
 // Sentry.init({

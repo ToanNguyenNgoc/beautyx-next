@@ -11,9 +11,6 @@ import Slider from "react-slick";
 import MapTagsItemMB from "./MapItemMB";
 import { IOrganization } from "../../interface/organization";
 import MapOrgItemDetail from "./MapOrgItemDetail";
-import {
-    GoogleMap, Marker, useLoadScript, InfoWindow, DirectionsRenderer
-} from "@react-google-maps/api";
 import MapOrgFilter from "./MapOrgFilter";
 import { fetchAsyncOrg } from "../../redux/org/orgSlice";
 import useDeviceMobile from "../../utils/useDeviceMobile";
@@ -141,10 +138,10 @@ const MapContent = (props: IProps) => {
             case 105: return setZoom(10)
         }
     }, [orgs.length])
-    const { isLoaded } = useLoadScript({
-        libraries: lib,
-        googleMapsApiKey: `${key}`
-    })
+    // const { isLoaded } = useLoadScript({
+    //     libraries: lib,
+    //     googleMapsApiKey: `${key}`
+    // })
     const onMarkerClick = (item: IOrganization, index: number) => {
         dispatch(fetchAsyncOrg(item.subdomain));
         dispatch(onSetOrgCenter(item))
@@ -175,25 +172,25 @@ const MapContent = (props: IProps) => {
 
     const [directionsResponse, setDirectionsResponse] = useState<any>()
     // const [step, setStep] = useState<any>()
-    const handleDirection = async () => {
-        if (orgCenter && LOCATION) {
-            setOpenListOrg(false)
-            const directionsService = new google.maps.DirectionsService()
-            const results = await directionsService.route({
-                // origin: originRef.current.value,
-                origin: {
-                    lat: parseFloat(LOCATION.split(",")[0]),
-                    lng: parseFloat(LOCATION.split(",")[1])
-                },
-                // destination: orgCenter.full_address,
-                destination: { lat: orgCenter.latitude, lng: orgCenter.longitude },
-                // eslint-disable-next-line no-undef
-                travelMode: google.maps.TravelMode.DRIVING,
-            })
-            setDirectionsResponse(results)
-            // setStep(results?.routes[0]?.legs[0]?.steps)
-        }
-    }
+    // const handleDirection = async () => {
+    //     if (orgCenter && LOCATION) {
+    //         setOpenListOrg(false)
+    //         const directionsService = new google.maps.DirectionsService()
+    //         const results = await directionsService.route({
+    //             // origin: originRef.current.value,
+    //             origin: {
+    //                 lat: parseFloat(LOCATION.split(",")[0]),
+    //                 lng: parseFloat(LOCATION.split(",")[1])
+    //             },
+    //             // destination: orgCenter.full_address,
+    //             destination: { lat: orgCenter.latitude, lng: orgCenter.longitude },
+    //             // eslint-disable-next-line no-undef
+    //             travelMode: google.maps.TravelMode.DRIVING,
+    //         })
+    //         setDirectionsResponse(results)
+    //         // setStep(results?.routes[0]?.legs[0]?.steps)
+    //     }
+    // }
 
 
     return (
@@ -205,7 +202,7 @@ const MapContent = (props: IProps) => {
                 openDetail={openDetail}
                 setOpenDetail={setOpenDetail}
             />
-            {
+            {/* {
                 isLoaded &&
                 <GoogleMap
                     id="searchbox-example"
@@ -252,7 +249,7 @@ const MapContent = (props: IProps) => {
                         <DirectionsRenderer directions={directionsResponse} />
                     }
                 </GoogleMap>
-            }
+            } */}
             <div
                 className={
                     openListOrg === true
@@ -285,14 +282,14 @@ const MapContent = (props: IProps) => {
                             ))}
                         </InfiniteScroll>
                     </div>
-                    {openDetail.open === true ? (
+                    {/* {openDetail.open === true ? (
                         <MapOrgItemDetail
                             org={org}
                             setOpenDetail={setOpenDetail}
                             openDetail={openDetail}
                             handleDirection={handleDirection}
                         />
-                    ) : null}
+                    ) : null} */}
                     <div
                         onClick={() => {
                             handleToggleListOrg();
@@ -314,12 +311,12 @@ const MapContent = (props: IProps) => {
                 IS_MB &&
                 <div className="map-list__mobile">
                     <Slider ref={slideRef} {...settings}>
-                        {orgs.length > 0 && orgs.map((item: any, index: number) => (
+                        {/* {orgs.length > 0 && orgs.map((item: any, index: number) => (
                             <MapTagsItemMB 
                             handleDirection={handleDirection} 
                             key={index} item={item} 
                             />
-                        ))}
+                        ))} */}
                     </Slider>
                 </div>
             }

@@ -1,10 +1,10 @@
 import React from "react";
-import {
-  withGoogleMap,
-  withScriptjs,
-  GoogleMap,
-  Marker,
-} from "react-google-maps";
+// import {
+//   withGoogleMap,
+//   withScriptjs,
+//   GoogleMap,
+//   Marker,
+// } from "react-google-maps";
 import icon from "../../../constants/icon";
 
 function MapBox(props: any) {
@@ -33,4 +33,5 @@ function MapBox(props: any) {
   );
 }
 
-export default withScriptjs(withGoogleMap(MapBox));
+// export default withScriptjs(withGoogleMap(MapBox));
+export default MapBox

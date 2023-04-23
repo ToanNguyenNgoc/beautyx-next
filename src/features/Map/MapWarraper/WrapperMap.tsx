@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wrapper } from '@googlemaps/react-wrapper';
+// import { Wrapper } from '@googlemaps/react-wrapper';
 import MyMapComponent from './MyMapComponent';
 
 
@@ -12,16 +12,17 @@ function WrapperMap(props:any) {
     }
     const zoom = 20;
     return (
-        <Wrapper
-            apiKey={key}
-        >
-            <MyMapComponent
-                map={map}
-                setMap={setMap}
-                center={center}
-                zoom={zoom}
-            />
-        </Wrapper>
+        // <Wrapper
+        //     apiKey={key}
+        // >
+        //     <MyMapComponent
+        //         map={map}
+        //         setMap={setMap}
+        //         center={center}
+        //         zoom={zoom}
+        //     />
+        // </Wrapper>
+        <></>
     );
 }
 

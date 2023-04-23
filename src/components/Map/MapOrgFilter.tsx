@@ -1,9 +1,9 @@
 
 import React, { useState, useCallback } from "react";
-import usePlacesAutocomplete, {
-    getGeocode,
-    getLatLng,
-} from "use-places-autocomplete";
+// import usePlacesAutocomplete, {
+//     getGeocode,
+//     getLatLng,
+// } from "use-places-autocomplete";
 import orgApi from "../../api/organizationApi";
 import { IOrganization } from "../../interface/organization";
 import icon from "../../constants/icon";
@@ -41,58 +41,58 @@ const PlaceComponent = (props: any) => {
         }, 1000),
         []
     );
-    const {
-        ready,
-        value,
-        setValue,
-        suggestions: { status, data },
-        clearSuggestions,
-    } = usePlacesAutocomplete();
+    // const {
+    //     ready,
+    //     value,
+    //     setValue,
+    //     suggestions: { status, data },
+    //     clearSuggestions,
+    // } = usePlacesAutocomplete();
     // console.log(data)
-    const handleSelect = (description: any) => {
-        setValue(description.description, false);
-        setOpenDetail({
-            ...openDetail,
-            open: false,
-            check: false,
-        })
-        setOrgs([]);
-        setZoom(14)
-        clearSuggestions();
-        getGeocode({ address: description.description }).then((results) => {
-            const { lat, lng } = getLatLng(results[0]);
-            const geo = `${lat},${lng}`;
-            map?.panTo({ lat: lat, lng: lng })
-            dispatch(onSetOrgsMapEmpty())
-            dispatch(fetchOrgsMapFilter({
-                page: 1,
-                LatLng: geo
-            }))
-        });
-    }
-    const onInputChange = (e: any) => {
-        setValue(e.target.value)
-        debounceDropDown(e.target.value)
-    }
-    const onClickOrgItemClick = (org: IOrganization) => {
-        setZoom(16)
-        setOpenDetail({
-            open: true,
-            check: true,
-        });
-        dispatch(fetchAsyncOrg(org.subdomain));
-        setValue(org.name, false)
-        map?.panTo({ lat: org.latitude, lng: org.longitude })
-        setOrgs([])
-        dispatch(onSetOrgCenter(org))
-        clearSuggestions();
-    }
+    // const handleSelect = (description: any) => {
+    //     setValue(description.description, false);
+    //     setOpenDetail({
+    //         ...openDetail,
+    //         open: false,
+    //         check: false,
+    //     })
+    //     setOrgs([]);
+    //     setZoom(14)
+    //     clearSuggestions();
+    //     getGeocode({ address: description.description }).then((results) => {
+    //         const { lat, lng } = getLatLng(results[0]);
+    //         const geo = `${lat},${lng}`;
+    //         map?.panTo({ lat: lat, lng: lng })
+    //         dispatch(onSetOrgsMapEmpty())
+    //         dispatch(fetchOrgsMapFilter({
+    //             page: 1,
+    //             LatLng: geo
+    //         }))
+    //     });
+    // }
+    // const onInputChange = (e: any) => {
+    //     setValue(e.target.value)
+    //     debounceDropDown(e.target.value)
+    // }
+    // const onClickOrgItemClick = (org: IOrganization) => {
+    //     setZoom(16)
+    //     setOpenDetail({
+    //         open: true,
+    //         check: true,
+    //     });
+    //     dispatch(fetchAsyncOrg(org.subdomain));
+    //     setValue(org.name, false)
+    //     map?.panTo({ lat: org.latitude, lng: org.longitude })
+    //     setOrgs([])
+    //     dispatch(onSetOrgCenter(org))
+    //     clearSuggestions();
+    // }
     return (
         <>
             <div className="flex-row-sp map-filter-cnt">
                 <div className="map-filter-cnt__left">
                     <div className="map-filter-cnt__input">
-                        <input
+                        {/* <input
                             type="text"
                             placeholder="Tìm kiếm trên bản đồ"
                             value={value}
@@ -105,10 +105,10 @@ const PlaceComponent = (props: any) => {
                             >
                                 <img src={icon.closeBlack} alt="" />
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="map-filter-cnt__drop">
-                        <ul className="map-filter-list-org">
+                        {/* <ul className="map-filter-list-org">
                             {
                                 status === "OK" &&
                                 data.map((suggestion) => {
@@ -138,7 +138,7 @@ const PlaceComponent = (props: any) => {
                                     </li>
                                 ))
                             }
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
                 <div className="map-filter-cnt__right">

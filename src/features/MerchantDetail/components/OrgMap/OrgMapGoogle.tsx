@@ -1,15 +1,15 @@
 import React from "react";
 import "../../../MerchantDetail/style.css";
 import { IOrganization } from "../../../../interface/organization";
-import {
-    withGoogleMap,
-    withScriptjs,
-    GoogleMap,
-    Marker,
-} from "react-google-maps";
+// import {
+//     withGoogleMap,
+//     withScriptjs,
+//     GoogleMap,
+//     Marker,
+// } from "react-google-maps";
 
 import icon from "../../../../constants/icon";
-import InfoWindow from "react-google-maps/lib/components/InfoWindow";
+// import InfoWindow from "react-google-maps/lib/components/InfoWindow";
 const OrgMapGoogle = (props: any) => {
     const { zoom, location, org } = props;
     const defaultMapOptions = {
@@ -47,4 +47,5 @@ const OrgMapGoogle = (props: any) => {
         </div>
     );
 };
-export default withScriptjs(withGoogleMap(OrgMapGoogle));
+// export default withScriptjs(withGoogleMap(OrgMapGoogle));
+export default OrgMapGoogle

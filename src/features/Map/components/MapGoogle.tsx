@@ -1,10 +1,10 @@
 import React from "react";
-import {
-    withGoogleMap,
-    withScriptjs,
-    GoogleMap,
-    Marker,
-} from "react-google-maps";
+// import {
+//     withGoogleMap,
+//     withScriptjs,
+//     GoogleMap,
+//     Marker,
+// } from "react-google-maps";
 import icon from "../../../constants/icon";
 
 function MapGoogle(props: any) {
@@ -39,4 +39,5 @@ function MapGoogle(props: any) {
     );
 }
 
-export default withScriptjs(withGoogleMap(MapGoogle));
+// export default withScriptjs(withGoogleMap(MapGoogle));
+export default MapGoogle

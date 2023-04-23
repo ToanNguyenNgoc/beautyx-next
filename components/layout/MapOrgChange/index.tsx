@@ -1,13 +1,12 @@
 import React, { useRef } from 'react';
 import { ImageComponent } from "../ImageCpn"
-import {
-    NavigationControl,
-    Marker
-} from "react-map-gl"
+// import {
+//     NavigationControl,
+//     Marker
+// } from "react-map-gl"
 import MapGL from "react-map-gl"
 import Slider from 'react-slick';
 import style from "./map-org.module.css"
-import "mapbox-gl/dist/mapbox-gl.css"
 import icon from '@/src/constants/icon';
 import { IBranch, IOrganization } from '@/interfaces/index';
 
@@ -55,7 +54,7 @@ export function MapOrgChange(props: MapOrgChangeProps) {
             }:{}}
             className={style.container}
         >
-            <MapGL
+            {/* <MapGL
                 ref={mapRef}
                 style={{ width: "100%", height: "100%" }}
                 initialViewState={{
@@ -88,7 +87,7 @@ export function MapOrgChange(props: MapOrgChangeProps) {
                     showZoom={true}
                     showCompass={true}
                 />
-            </MapGL>
+            </MapGL> */}
             <div className={style.card_list_cnt}>
                 <ul className={style.cart_list}>
                     {

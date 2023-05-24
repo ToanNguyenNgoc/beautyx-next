@@ -16,7 +16,6 @@ declaration.a.ts
 
 # Maven
 target/
-dist/
 
 # JetBrains IDE
 .idea/
@@ -48,14 +47,11 @@ build/
 .firebase/
 .firebaserc
 .vscode/
-.next/
 firebase.json
 package-lock.json
  
 .firebase/hosting.YnVpbGQ.cache
 prod/
 .firebase/hosting.YnVpbGQ.cache
-
-*.cache
  
  

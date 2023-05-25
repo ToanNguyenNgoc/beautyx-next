@@ -25,6 +25,34 @@ export const directUrlDiscount = (discount: IDiscountPar, item: IITEMS_DISCOUNT)
 	const discount_url = `/chi-tiet-giam-gia/${slugify(item.productable.service_name ?? item.productable.product_name)}?sid=${item.productable_id}&org_id=${item.organization_id}&id=${discount.id}`
 	return discount_url
 }
+export const formatRouterLinkDiscount = (
+	discountPar: IDiscountPar,
+	discountChild: IITEMS_DISCOUNT
+) => {
+	const org = discountChild?.organization;
+	const onCheckType = () => {
+		let type;
+		// let link = ""
+		switch (discountChild.productable_type) {
+			case "App\\Models\\CI\\Service":
+				type = "service";
+				// link = "chi-tiet-giam-gia"
+				break;
+			case "App\\Models\\CI\\Product":
+				type = "product";
+				// link = "chi-tiet-giam-gia-sp"
+				break;
+		}
+		return type;
+	};
+	const type = onCheckType();
+	const name =
+		discountChild.productable.service_name ??
+		discountChild.productable.product_name;
+	const patchDiscountOb = `/chi-tiet-giam-gia/${type}_${org?.id}_${discountPar.uuid ?? discountPar.id
+		}_${discountChild.productable_id}_${slugify(name)}`;
+	return patchDiscountOb;
+};
 export const directUrlProSerResult = (type: "SERVICE" | "PRODUCT", name: string, id: number) => {
 	let url = "";
 	if (type === "SERVICE") url = "dich-vu";

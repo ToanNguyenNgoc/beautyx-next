@@ -1,6 +1,0 @@
-export * from './components/DetailDisLeft'
-export * from './components/DetailDisRight'
-export * from './components/DetailDisReview'
-export * from './components/DetailDisOrg'
-export * from './components/DetailDisPolicy'
-export * from './components/DetailDisBottomMB'

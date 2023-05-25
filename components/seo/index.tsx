@@ -3,14 +3,15 @@ import Head from 'next/head';
 
 interface ISeoProps {
     title: string,
-    description: string,
-    url: string
+    description?: string,
+    url?: string,
+    image_url?:string
 }
 
 function Seo(props: ISeoProps) {
     // const domain = process.env.NEXT_PUBLIC_DOMAIN
     const domain = "https://localhost:3000"
-    const { title, description, url } = props
+    const { title, description, url, image_url } = props
     return (
         <Head>
             <title>{title}</title>
@@ -23,14 +24,14 @@ function Seo(props: ISeoProps) {
             <meta property="og:url" content={`${domain}/${url}`} />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />
-            {/* <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png" /> */}
+            <meta property="og:image" content={image_url} />
 
             {/* Twitter */}
             <meta property="twitter:card" content="summary_large_image" />
             <meta property="twitter:url" content={`${domain}/${url}`} />
             <meta property="twitter:title" content={title} />
             <meta property="twitter:description" content={description} />
-            {/* <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"></meta> */}
+            <meta property="twitter:image" content={image_url}></meta>
         </Head>
     );
 }

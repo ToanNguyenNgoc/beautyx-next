@@ -124,6 +124,55 @@ const serviceApi = new ServiceApi();
 
 /***/ }),
 
+/***/ 4639:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Y": () => (/* binding */ handleScroll),
+/* harmony export */   "r": () => (/* binding */ handleChangeScroll)
+/* harmony export */ });
+const handleScroll = (is_mobile, setValue, scrollReview, scrollDesc, scrollMap, scrollPolicy)=>{
+    const b = is_mobile ? 113 : 72;
+    if (window.scrollY + b < scrollReview) {
+        setValue("1");
+    } else if (window.scrollY + b > scrollDesc && window.scrollY + b < scrollMap) {
+        setValue("2");
+    } else if (window.scrollY + b > scrollReview && window.scrollY + b < scrollPolicy) {
+        setValue("3");
+    } else if (window.scrollY + b > scrollMap) {
+        setValue("4");
+    }
+};
+const handleChangeScroll = (is_mobile, value, setValue, refDesc, refReview, refMap, refPolicy)=>{
+    const b = is_mobile ? 113 : 72;
+    let top;
+    switch(value){
+        case "1":
+            top = refDesc?.current?.offsetTop - b;
+            setValue(value);
+            break;
+        case "2":
+            top = refReview?.current?.offsetTop - b;
+            setValue(value);
+            break;
+        case "3":
+            top = refMap?.current?.offsetTop - b;
+            setValue(value);
+            break;
+        case "4":
+            top = refPolicy?.current?.offsetTop - b;
+            setValue(value);
+            break;
+        default:
+            break;
+    }
+    return top;
+};
+
+
+/***/ }),
+
 /***/ 3335:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -254,7 +303,8 @@ const ServiceProductDetail = (props)=>{
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_seo__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
                 title: `${DETAIL.name} - ${org.name} | BeautyX`,
                 description: `Trải nghiệm thanh toán, đặt hẹn và mua sản phẩm Online dịch vụ, sản phẩm ${DETAIL.name} tại ${org.name}`,
-                url: ""
+                url: "",
+                image_url: DETAIL.image_url
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_service_product_detail__WEBPACK_IMPORTED_MODULE_9__/* .HeaderDetail */ .KB, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_6__.Container, {
@@ -909,7 +959,7 @@ module.exports = import("firebase/auth");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [676,7136,9649,7469,5191,4639], () => (__webpack_exec__(3335)));
+var __webpack_exports__ = __webpack_require__.X(0, [676,7136,9649,7469,5191], () => (__webpack_exec__(3335)));
 module.exports = __webpack_exports__;
 
 })();

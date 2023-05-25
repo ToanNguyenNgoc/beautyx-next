@@ -21,7 +21,7 @@ exports.modules = {
 function Seo(props) {
     // const domain = process.env.NEXT_PUBLIC_DOMAIN
     const domain = "https://localhost:3000";
-    const { title , description , url  } = props;
+    const { title , description , url , image_url  } = props;
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
@@ -56,6 +56,10 @@ function Seo(props) {
                 content: description
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "og:image",
+                content: image_url
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:card",
                 content: "summary_large_image"
             }),
@@ -70,6 +74,10 @@ function Seo(props) {
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:description",
                 content: description
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                property: "twitter:image",
+                content: image_url
             })
         ]
     });

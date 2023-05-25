@@ -2803,7 +2803,8 @@ const OrgDetail = (props)=>{
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_seo__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
                 title: `${props?.org?.name} - BeautyX`,
                 description: `Lựa chọn nhiều sản phẩm, dịch vụ từ ${props?.org?.name}, thanh toán, đặt hẹn online và nhiều ưu đãi khác`,
-                url: `org/${props?.org?.name}`
+                url: `org/${props?.org?.name}`,
+                image_url: org.image_url
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_org_detail__WEBPACK_IMPORTED_MODULE_4__/* .OrgHeader */ .sv, {
                 org: org
@@ -3325,7 +3326,7 @@ module.exports = import("firebase/auth");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [676,7136,9649,7469,6776,5191,553,7171,9252], () => (__webpack_exec__(7468)));
+var __webpack_exports__ = __webpack_require__.X(0, [676,7136,9649,7469,6776,5191,7171,553,9252], () => (__webpack_exec__(7468)));
 module.exports = __webpack_exports__;
 
 })();

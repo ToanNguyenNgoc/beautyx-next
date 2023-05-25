@@ -10,10 +10,9 @@ exports.modules = {
 /* harmony export */   "EI": () => (/* binding */ IS_VOUCHER),
 /* harmony export */   "TV": () => (/* binding */ EX_APPLY_DATE),
 /* harmony export */   "f8": () => (/* binding */ EX_DISCOUNT_TYPE),
-/* harmony export */   "h3": () => (/* binding */ getPriceDiscount),
 /* harmony export */   "ld": () => (/* binding */ IS_FLASH_SALE)
 /* harmony export */ });
-/* unused harmony exports EX_DISCOUNT_UNIT, EX_ORDER_VALUE */
+/* unused harmony exports getPriceDiscount, EX_DISCOUNT_UNIT, EX_ORDER_VALUE */
 /* harmony import */ var _type_discount_type__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9178);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2245);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
@@ -27,10 +26,10 @@ const getPriceDiscount = (item_id, discount)=>{
     let sale_price, old_price;
     const productable = discount?.items?.find((i)=>i.productable_id == item_id)?.productable;
     const price = productable?.retail_price ?? productable?.price;
-    if (productable && discount.discount_type === _type_discount_type__WEBPACK_IMPORTED_MODULE_0__/* .DISCOUNT_TYPE.FINAL_PRICE.key */ .u.FINAL_PRICE.key) {
+    if (productable && discount.discount_type === DISCOUNT_TYPE.FINAL_PRICE.key) {
         sale_price = discount?.discount_value, old_price = price;
     }
-    if (productable && discount.discount_type === _type_discount_type__WEBPACK_IMPORTED_MODULE_0__/* .DISCOUNT_TYPE.PRODUCT.key */ .u.PRODUCT.key && price) {
+    if (productable && discount.discount_type === DISCOUNT_TYPE.PRODUCT.key && price) {
         sale_price = price - discount.discount_value, old_price = price;
     }
     return {

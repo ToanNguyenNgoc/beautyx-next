@@ -36,6 +36,7 @@ const OrgDetail: NextPageWithLayout = (props: any) => {
 				title={`${props?.org?.name} - BeautyX`}
 				description={`Lựa chọn nhiều sản phẩm, dịch vụ từ ${props?.org?.name}, thanh toán, đặt hẹn online và nhiều ưu đãi khác`}
 				url={`org/${props?.org?.name}`}
+				image_url={org.image_url}
 			/>
 			<OrgHeader org={org} />
 			<Container>

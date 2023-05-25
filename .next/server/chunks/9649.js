@@ -5348,11 +5348,12 @@ function AppProvider({ children  }) {
 /* harmony export */   "Wc": () => (/* binding */ directUrlProSerResult),
 /* harmony export */   "Xt": () => (/* binding */ directUrlCombo),
 /* harmony export */   "am": () => (/* binding */ directUrlService),
-/* harmony export */   "i6": () => (/* binding */ directUrlDiscount),
 /* harmony export */   "js": () => (/* binding */ directUrlProduct),
 /* harmony export */   "ri": () => (/* binding */ directUrlApp),
+/* harmony export */   "s$": () => (/* binding */ formatRouterLinkDiscount),
 /* harmony export */   "uB": () => (/* binding */ directUrlOrg)
 /* harmony export */ });
+/* unused harmony export directUrlDiscount */
 /* harmony import */ var _src_utils_formatUrlString__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6250);
 
 const directUrlOrg = (id, locale)=>{
@@ -5375,8 +5376,28 @@ const directUrlCombo = (combo_name, cid, org_id)=>{
     return combo_url;
 };
 const directUrlDiscount = (discount, item)=>{
-    const discount_url = `/chi-tiet-giam-gia/${(0,_src_utils_formatUrlString__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .ZP)(item.productable.service_name ?? item.productable.product_name)}?sid=${item.productable_id}&org_id=${item.organization_id}&id=${discount.id}`;
+    const discount_url = `/chi-tiet-giam-gia/${slugify(item.productable.service_name ?? item.productable.product_name)}?sid=${item.productable_id}&org_id=${item.organization_id}&id=${discount.id}`;
     return discount_url;
+};
+const formatRouterLinkDiscount = (discountPar, discountChild)=>{
+    const org = discountChild?.organization;
+    const onCheckType = ()=>{
+        let type;
+        // let link = ""
+        switch(discountChild.productable_type){
+            case "App\\Models\\CI\\Service":
+                type = "service";
+                break;
+            case "App\\Models\\CI\\Product":
+                type = "product";
+                break;
+        }
+        return type;
+    };
+    const type = onCheckType();
+    const name = discountChild.productable.service_name ?? discountChild.productable.product_name;
+    const patchDiscountOb = `/chi-tiet-giam-gia/${type}_${org?.id}_${discountPar.uuid ?? discountPar.id}_${discountChild.productable_id}_${(0,_src_utils_formatUrlString__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .ZP)(name)}`;
+    return patchDiscountOb;
 };
 const directUrlProSerResult = (type, name, id)=>{
     let url = "";
@@ -7037,7 +7058,6 @@ __webpack_require__.d(__webpack_exports__, {
   "jn": () => (/* reexport */ org_query_params/* cateOrgProductParams */.jn),
   "ZK": () => (/* reexport */ org_query_params/* comboOrgParams */.ZK),
   "DW": () => (/* reexport */ commentParams),
-  "lq": () => (/* reexport */ discountDetailParams),
   "o4": () => (/* reexport */ discountParams),
   "RG": () => (/* reexport */ orderParams),
   "dm": () => (/* reexport */ org_query_params/* orgDiscountsParams */.dm),
@@ -7049,7 +7069,7 @@ __webpack_require__.d(__webpack_exports__, {
   "Xh": () => (/* reexport */ tagsProductParams)
 });
 
-// UNUSED EXPORTS: orgGalleriesParams, serviceDetailParams
+// UNUSED EXPORTS: discountDetailParams, orgGalleriesParams, serviceDetailParams
 
 ;// CONCATENATED MODULE: ./context/query-params/discounts-query-params.ts
 const discountParams = {

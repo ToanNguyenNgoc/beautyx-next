@@ -5,7 +5,7 @@ import { DISCOUNT_TYPE } from '@/src/utils/formatRouterLink/fileType'
 import icon from '@/src/constants/icon'
 import style from './discount-item.module.css'
 import Link from 'next/link'
-import { directUrlDiscount } from '@/context/direct-url'
+import {  formatRouterLinkDiscount } from '@/context/direct-url'
 import { ImageComponent } from '../layout'
 
 interface IDiscountItemChild {
@@ -17,7 +17,7 @@ function DiscountItem(props: IDiscountItemChild) {
 	const { item, discount } = props
 	const image_url = item?.productable.image_url ?? item?.organization.image_url
 	return (
-		<Link href={directUrlDiscount(discount, item)}>
+		<Link href={formatRouterLinkDiscount(discount, item)}>
 			<a className={style.homeDiscountItem}>
 				<div className={style.discountImg}>
 					<ImageComponent

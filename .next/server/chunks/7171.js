@@ -63,7 +63,7 @@ function DiscountItem(props) {
     const { item , discount  } = props;
     const image_url = item?.productable.image_url ?? item?.organization.image_url;
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
-        href: (0,_context_direct_url__WEBPACK_IMPORTED_MODULE_6__/* .directUrlDiscount */ .i6)(discount, item),
+        href: (0,_context_direct_url__WEBPACK_IMPORTED_MODULE_6__/* .formatRouterLinkDiscount */ .s$)(discount, item),
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("a", {
             className: (_discount_item_module_css__WEBPACK_IMPORTED_MODULE_7___default().homeDiscountItem),
             children: [

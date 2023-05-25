@@ -116,6 +116,7 @@ const ServiceProductDetail: NextPageWithLayout = (props: any) => {
 				title={`${DETAIL.name} - ${org.name} | BeautyX`}
 				description={`Trải nghiệm thanh toán, đặt hẹn và mua sản phẩm Online dịch vụ, sản phẩm ${DETAIL.name} tại ${org.name}`}
 				url=""
+				image_url={DETAIL.image_url}
 			/>
 			<HeaderDetail />
 			<Container>
